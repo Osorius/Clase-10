@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/********************************** BODY *********************************************/
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+                        "header    header" 
+                        "hero         add"
+                        "contenedor  side"
+                        "footer    footer";           
+}
+header{
+    grid-area: header;
+}
+.hero{
+    grid-area: hero;
+}
+.add{
+    grid-area: add;
+}
+.contenedor{
+    grid-area: contenedor;
+}
+.side{
+    grid-area: side;
+}
+footer{
+    grid-area: footer;
+}
+header,footer{
+    background: #000224;
+}
+section,main{
+    background-image: radial-gradient(circle at 46.63% 11.54%, #ebaaef 0, #c596d2 16.67%, #9e80b1 33.33%, #78678b 50%, #564f66 66.67%, #3b3944 83.33%, #262628 100%);
+}
+/********************************** HEADER *********************************************/
+.navBar{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: center;
+}
+
+.navBar .menu{   
+    font-size: 15px;
+    grid-column: 4 / 7;
+    display: flex;
+    justify-content: space-evenly;
+}
+.navBar .menu li{
+    list-style: none;
+}
+.navBar .menu li a{
+    text-decoration: none;
+    color:white;
+}    
+.navBar .menu li a:hover{
+    background: #3b007e;
+}
+.navBar .logo{
+    margin: 10px;
+    width: 70px;
+    height: 80px;
+    grid-column: 2 / 3;
+}
+.title{
+    color: rgb(160, 121, 204);
+    text-align: center;
+    letter-spacing: 3px;
+    grid-column: 3 / 9;
+    grid-row: 2;
+    font-size: 45px;
+}
+
+.imagen{
+    display: grid;
+    grid-column: 2 / 4;
+    grid-row: 6 / 9;
+}
+
+/********************************** HERO *********************************************/
+.hero{
+    height: 80vh;
+    background: url(./images/backgorund/fungi4.jpg);
+    background-size: cover;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+.hero-text{
+    background: rgba(0, 0, 0, 0.479);
+    border-radius: 3px;
+    color: beige;
+    grid-column: 2 / 6;
+    grid-row: 4 / 4;
+}
+.phero{
+    width: 100%;
+}
+
+/********************************** ADD *********************************************/
+.element2{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+.element3{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+
+}
+/********************************** CONTAINER *********************************************/
+.container{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+.container .text2{
+    display: grid;
+    grid-column: 1 / 5;
+    margin: 25px;
+    color: rgb(0, 0, 0);
+}
+.text3{
+    display: grid;
+    grid-column: 1 / 5;
+    grid-row: 5;
+    margin: 25px;
+    margin-top: 60px;
+}
+.element4{
+    display: grid;
+    grid-column: 2;
+    grid-row: 2 / 5;
+    
+}
+/********************************** SIDE *********************************************/
+
+.text-side{
+    margin: 10px;
+    padding: 10px;
+}
+.image-side{
+    margin: 50px;
+}
+.text-side2{
+    margin: 10px;
+    padding: 10px;
+}
+/********************************** FOOTER *********************************************/
+textarea{
+    resize: none;
+}
+.pie{
+    width: 100%;
+    background-color: #0a141d;
+}
+
+.pie .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: (repeat 3 1fr) ;
+}
+
+.siguenos{
+    text-decoration: underline rgb(255, 255, 255);
+    text-align: center;
+
+    font-size: 15px;
+    color: #fff;
+    margin: 10px;
+}
+
+.pie .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    margin: 20px;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0a141d;
+    text-align: center;
+    transition: all 300ms ease;
+
+}
+.pie .red-social a:hover{
+    color: aqua;
+}
+.red-social{
+    display: flex;
+    justify-content: center;
+}
+
+.pie .grupo-2{
+    background-color: #0a1a2a;
+
+    padding: 5px 5px;
+    text-align: center;
+    color: #fff;
+        width: 100%;
+}
+.pie .grupo-2 .small{
+    font-size: 15px;
+}
+/********************************** RESPOSIVE *********************************************/
+@media (max-width: 768px) {
+    .navBar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .navBar .menu{   
+        font-size: 11px;
+        flex-wrap: wrap;
+    } 
+
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 2vh;
+    }
+    .video{
+        max-width: 320px;
+    }
+    .navBar .logo{ 
+        margin:5px;
+        width: 40px;
+        height: 50px;
+
+    }
+    .hero{
+        height: 40vh;
+        background: url(./images/backgorund/fungi4.jpg);
+        background-size: cover;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+    }
+
+    .hero-text{
+        background: rgba(0, 0, 0, 0.479);
+        border-radius: 3px;
+        color: beige;
+        font-size: 9px;
+    }
+    .title{
+        color: rgb(160, 121, 204);
+        text-align: center;
+        letter-spacing: 3px;
+        grid-column: 3 / 9;
+        grid-row: 2;
+        font-size: 20px;
+    }
+    .imagenes-productos{
+        width: 350px;
+        height: 150px;
+        margin: 10px;
+    }
+    .add{
+        display: none;
+    }
+    .container{
+        height: 165vh;
+    }
+    .image-side{
+        width: 350px;
+        height: 150px;
+        margin: 10px;
+    }
+}
